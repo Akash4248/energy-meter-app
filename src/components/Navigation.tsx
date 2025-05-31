@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { BarChart3, Home, CreditCard, Settings, Zap } from "lucide-react";
+import { NotificationCenter } from "@/components/energy/NotificationCenter";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: Home },
@@ -52,7 +53,7 @@ export function Navigation() {
             </div>
           </div>
 
-          {/* Notification Center */}
+          {/* Right side with notifications */}
           <div className="flex items-center space-x-4">
             <div className="relative">
               <NotificationCenter />
