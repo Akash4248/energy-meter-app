@@ -11,6 +11,7 @@ import {
   QuickRecommendations,
 } from "@/components/energy/AIInsights";
 import { HourlyUsageChart } from "@/components/energy/EnergyCharts";
+import { WelcomeModal } from "@/components/energy/WelcomeModal";
 
 export default function Dashboard() {
   return (
