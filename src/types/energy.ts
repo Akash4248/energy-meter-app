@@ -15,6 +15,7 @@ export interface DailyUsage {
 }
 
 export interface MonthlyBill {
+  id: string;
   month: string;
   year: number;
   totalUsage: number;
