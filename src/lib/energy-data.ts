@@ -130,6 +130,16 @@ export function generateMonthlyBills(): MonthlyBill[] {
     const date = new Date();
     date.setMonth(date.getMonth() - i);
 
+    // Ensure we don't have duplicate month-year combinations
+    const monthKey = `${months[date.getMonth()]}-${date.getFullYear()}`;
+    const existingBill = bills.find(
+      (bill) => `${bill.month}-${bill.year}` === monthKey,
+    );
+
+    if (existingBill) {
+      continue; // Skip if we already have this month-year combination
+    }
+
     const peakUnits = 150 + Math.random() * 100;
     const normalUnits = 200 + Math.random() * 150;
     const offPeakUnits = 300 + Math.random() * 200;
