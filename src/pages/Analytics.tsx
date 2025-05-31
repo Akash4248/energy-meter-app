@@ -172,7 +172,7 @@ export default function Analytics() {
                 <div className="space-y-4">
                   {monthlyBills.slice(-6).map((bill, index) => (
                     <div
-                      key={`${bill.month}-${bill.year}`}
+                      key={`analytics-${bill.month}-${bill.year}-${index}`}
                       className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
                     >
                       <div>
