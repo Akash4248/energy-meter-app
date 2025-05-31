@@ -170,9 +170,9 @@ export default function Analytics() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {monthlyBills.slice(-6).map((bill, index) => (
+                  {monthlyBills.slice(-6).map((bill) => (
                     <div
-                      key={`analytics-${bill.month}-${bill.year}-${index}`}
+                      key={`analytics-${bill.id}`}
                       className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
                     >
                       <div>
