@@ -187,9 +187,9 @@ export default function Billing() {
               <CardContent>
                 <div className="space-y-4">
                   {/* Pending Payment */}
-                  {pendingPayments.map((bill, index) => (
+                  {pendingPayments.map((bill) => (
                     <div
-                      key={`pending-${bill.month}-${bill.year}-${index}`}
+                      key={`pending-${bill.id}`}
                       className="flex items-center justify-between p-4 bg-red-50 rounded-lg border border-red-200"
                     >
                       <div className="flex items-center space-x-3">
@@ -215,7 +215,7 @@ export default function Billing() {
                   {/* Paid Bills */}
                   {paidBills.map((bill, index) => (
                     <div
-                      key={`paid-${bill.month}-${bill.year}-${index}`}
+                      key={`paid-${bill.id}`}
                       className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
                     >
                       <div className="flex items-center space-x-3">
