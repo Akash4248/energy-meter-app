@@ -149,6 +149,7 @@ export function generateMonthlyBills(): MonthlyBill[] {
     const offPeakCost = offPeakUnits * getTariffRate("off-peak");
 
     bills.push({
+      id: `bill-${date.getFullYear()}-${date.getMonth()}-${Date.now()}-${Math.random()}`,
       month: months[date.getMonth()],
       year: date.getFullYear(),
       totalUsage: Number((peakUnits + normalUnits + offPeakUnits).toFixed(2)),
